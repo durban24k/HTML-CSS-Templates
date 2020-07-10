@@ -1,162 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Timeline</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
-        body{
-            margin:0;
-            padding:0;
-            font-family:'Montserrat',sans-serif;
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background:black;
         }
-        h1{
-            text-align:center;
-            font-size:60px;
+
+        h1 {
+            text-align: center;
+            font-size: 60px;
+            color:whitesmoke;
         }
-        .timeline{
-            position:relative;
-            margin:50px auto;
-            padding:40px 0;
-            width:1000px;
+
+        .timeline {
+            position: relative;
+            margin: 50px auto;
+            padding: 40px 0;
+            width: 1000px;
             box-sizing: border-box;
         }
-        .timeline:before{
-            content:'';
-            position:absolute;
-            left:50%;
-            width:2px;
-            height:100%;
-            background:#c5c5c5;
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #c5c5c5;
         }
-        .timeline ul{
-            margin:0;
-            padding:0;
+
+        .timeline ul {
+            margin: 0;
+            padding: 0;
         }
-        .timeline ul li{
-            line-height:normal;
-            position:relative;
-            width:50%;
-            padding:20px 40px;
-            box-sizing:border-box;
+
+        .timeline ul li {
+            line-height: normal;
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            box-sizing: border-box;
             list-style-type: none;
         }
-        .timeline ul li:nth-child(odd){
-            float:left;
-            text-align:right;
-            clear:both;
+
+        .timeline ul li:nth-child(odd) {
+            float: left;
+            text-align: right;
+            clear: both;
         }
-        .timeline ul li:nth-child(even){
-            float:right;
-            text-align:left;
-            clear:both;
+
+        .timeline ul li:nth-child(even) {
+            float: right;
+            text-align: left;
+            clear: both;
         }
-        .timeline ul li:nth-child(odd):before{
-            content:'';
-            position:absolute;
-            top:24px;
-            right:-6px;
-            width:10px;
-            height:10px;
-            background:rgba(233,33,99,1);
-            border-radius:50%;
-            box-shadow: 0 0 0 3px rgba(233,33,99,.2);
+
+        .timeline ul li:nth-child(odd):before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            right: -6px;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px rgba(255,255,255,.2);
         }
-        .timeline ul li:nth-child(even):before{
-            content:'';
-            position:absolute;
-            top:24px;
-            left:-4px;
-            width:10px;
-            height:10px;
-            background:rgba(233,33,99,1);
-            border-radius:50%;
-            box-shadow: 0 0 0 3px rgba(233,33,99,.2);
+
+        .timeline ul li:nth-child(even):before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: -4px;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px rgba(255,255,255,.2);
         }
-        .content{
-            padding-bottom:20px;
+
+        .content {
+            padding-bottom: 20px;
         }
-        .timeline ul li h3{
-            margin:0;
-            padding:0;
-            font-weight:600;
-            color: rgba(233,33,99,1);
+
+        .timeline ul li h3 {
+            margin: 0;
+            padding: 0;
+            font-weight: 600;
+            color: whitesmoke;
         }
-        .timeline ul li p{
+
+        .timeline ul li p {
             margin: 10px 0 0;
-            padding:0;
+            padding: 0;
         }
-        .timeline ul li .time h4{
-            margin:0;
-            padding:0;
-            font-size:14px;
+        .timeline ul li .content{
+            color:rgba(255, 255, 255, 1);
+        }
+        .timeline ul li .content p{
+            font-size:12px;
+        }
+        .timeline ul li .time h4 {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
 
         }
-        .timeline ul li:nth-child(odd) .time{
-            position:absolute;
-            top:10px;
-            right:-166px;
-            margin:0;
-            padding:8px 16px;
-            background:rgba(233,33,99,1);
-            color:whitesmoke;
-            border-radius:20px;
-            box-shadow:0 0 0 3px rgba(233,33,99,.2);
+
+        .timeline ul li:nth-child(odd) .time {
+            position: absolute;
+            top: 10px;
+            right: -166px;
+            margin: 0;
+            padding: 8px 16px;
+            background: whitesmoke;
+            color: black;
+            border-radius: 20px;
+            box-shadow: 0 0 0 3px rgba(255,255,255,.2);
         }
-        .timeline ul li:nth-child(even) .time{
-            position:absolute;
-            top:10px;
-            left:-166px;
-            margin:0;
-            padding:8px 16px;
-            background:rgba(233,33,99,1);
-            color:whitesmoke;
-            border-radius:20px;
-            box-shadow:0 0 0 3px rgba(233,33,99,.2);
+
+        .timeline ul li:nth-child(even) .time {
+            position: absolute;
+            top: 10px;
+            left: -166px;
+            margin: 0;
+            padding: 8px 16px;
+            background: whitesmoke;
+            color: black;
+            border-radius: 20px;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, .2);
         }
-        @media (max-width:1000px){
-            .timeline{
-                width:100%;
+
+        @media (max-width:1000px) {
+            .timeline {
+                width: 100%;
             }
         }
-        @media (max-width:767px){
-            h1{
-                text-align:center;
-                font-size:40px;
-                padding:0 20px;
+
+        @media (max-width:767px) {
+            h1 {
+                text-align: center;
+                font-size: 40px;
+                padding: 0 20px;
             }
-            .timeline{
-                width:100%;
-                padding-bottom:0;
+
+            .timeline {
+                width: 100%;
+                padding-bottom: 0;
             }
-            .timeline:before{
-                left:20px;
+
+            .timeline:before {
+                left: 20px;
             }
-            .timeline ul li{
-                padding:60px 40px;
+
+            .timeline ul li {
+                padding: 60px 40px;
             }
+
             .timeline ul li:nth-child(even),
-            .timeline ul li:nth-child(odd){
-                width:100%;
-                text-align:left;
-                padding-left:50px;
-                padding-bottom:50px;
+            .timeline ul li:nth-child(odd) {
+                width: 100%;
+                text-align: left;
+                padding-left: 50px;
+                padding-bottom: 50px;
             }
+
             .timeline ul li:nth-child(even):before,
-            .timeline ul li:nth-child(odd):before{
-                top:10px;
-                left:16px;
+            .timeline ul li:nth-child(odd):before {
+                top: 10px;
+                left: 16px;
             }
+
             .timeline ul li:nth-child(even) .time,
-            .timeline ul li:nth-child(odd) .time{
-                top:0px;
-                left:50px;
-                right:inherit;
+            .timeline ul li:nth-child(odd) .time {
+                top: 0px;
+                left: 50px;
+                right: inherit;
             }
         }
     </style>
 </head>
+
 <body>
     <h1>Responsive CSS Timeline</h1>
     <div class="timeline">
@@ -164,7 +197,11 @@
             <li>
                 <div class="content">
                     <h3>What is Lorem Ipsum?</h3>
-                    <p><div id="20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quidem nemo natus aspernatur maxime saepe consequuntur blanditiis error, labore possimus, corrupti fugit neque itaque optio sunt doloremque perferendis? Repudiandae, ut!</div></p>
+                    <p>
+                        <div id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quidem nemo
+                            natus aspernatur maxime saepe consequuntur blanditiis error, labore possimus, corrupti fugit
+                            neque itaque optio sunt doloremque perferendis? Repudiandae, ut!</div>
+                    </p>
                 </div>
                 <div class="time">
                     <h4>January 2018</h4>
@@ -173,7 +210,11 @@
             <li>
                 <div class="content">
                     <h3>What is Lorem Ipsum?</h3>
-                    <p><div id="20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quidem nemo natus aspernatur maxime saepe consequuntur blanditiis error, labore possimus, corrupti fugit neque itaque optio sunt doloremque perferendis? Repudiandae, ut!</div></p>
+                    <p>
+                        <div id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quidem nemo
+                            natus aspernatur maxime saepe consequuntur blanditiis error, labore possimus, corrupti fugit
+                            neque itaque optio sunt doloremque perferendis? Repudiandae, ut!</div>
+                    </p>
                 </div>
                 <div class="time">
                     <h4>January 2018</h4>
@@ -182,7 +223,11 @@
             <li>
                 <div class="content">
                     <h3>What is Lorem Ipsum?</h3>
-                    <p><div id="20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quidem nemo natus aspernatur maxime saepe consequuntur blanditiis error, labore possimus, corrupti fugit neque itaque optio sunt doloremque perferendis? Repudiandae, ut!</div></p>
+                    <p>
+                        <div id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quidem nemo
+                            natus aspernatur maxime saepe consequuntur blanditiis error, labore possimus, corrupti fugit
+                            neque itaque optio sunt doloremque perferendis? Repudiandae, ut!</div>
+                    </p>
                 </div>
                 <div class="time">
                     <h4>January 2018</h4>
@@ -191,7 +236,11 @@
             <li>
                 <div class="content">
                     <h3>What is Lorem Ipsum?</h3>
-                    <p><div id="20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quidem nemo natus aspernatur maxime saepe consequuntur blanditiis error, labore possimus, corrupti fugit neque itaque optio sunt doloremque perferendis? Repudiandae, ut!</div></p>
+                    <p>
+                        <div id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quidem nemo
+                            natus aspernatur maxime saepe consequuntur blanditiis error, labore possimus, corrupti fugit
+                            neque itaque optio sunt doloremque perferendis? Repudiandae, ut!</div>
+                    </p>
                 </div>
                 <div class="time">
                     <h4>January 2018</h4>
@@ -200,7 +249,11 @@
             <li>
                 <div class="content">
                     <h3>What is Lorem Ipsum?</h3>
-                    <p><div id="20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quidem nemo natus aspernatur maxime saepe consequuntur blanditiis error, labore possimus, corrupti fugit neque itaque optio sunt doloremque perferendis? Repudiandae, ut!</div></p>
+                    <p>
+                        <div id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quidem nemo
+                            natus aspernatur maxime saepe consequuntur blanditiis error, labore possimus, corrupti fugit
+                            neque itaque optio sunt doloremque perferendis? Repudiandae, ut!</div>
+                    </p>
                 </div>
                 <div class="time">
                     <h4>January 2018</h4>
@@ -209,7 +262,11 @@
             <li>
                 <div class="content">
                     <h3>What is Lorem Ipsum?</h3>
-                    <p><div id="20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quidem nemo natus aspernatur maxime saepe consequuntur blanditiis error, labore possimus, corrupti fugit neque itaque optio sunt doloremque perferendis? Repudiandae, ut!</div></p>
+                    <p>
+                        <div id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quidem nemo
+                            natus aspernatur maxime saepe consequuntur blanditiis error, labore possimus, corrupti fugit
+                            neque itaque optio sunt doloremque perferendis? Repudiandae, ut!</div>
+                    </p>
                 </div>
                 <div class="time">
                     <h4>January 2018</h4>
@@ -219,4 +276,5 @@
         </ul>
     </div>
 </body>
+
 </html>
