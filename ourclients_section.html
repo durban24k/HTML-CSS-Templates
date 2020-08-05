@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <title>Our Clients Section</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,XMR=swap');
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            width:100%;
+            height:auto;
+            display:flex;
+            align-items: center;
+            justify-content:center;
+            background:white;
+            font-family:"Barlow",sans-serif;
+        }
+        .client-wrap{
+            width:90% auto;
+            height:auto;
+            text-align:center;
+        }
+        .client-wrap h1{
+            font-size:60px;
+            color:#555;
+        }
+        .client-wrap hr{
+            width:100px;
+            height:5px;
+            border:none;
+            background:#26ccca;
+            margin:auto;
+            margin-top:30px;
+            margin-bottom:30px;
+        }
+        .client-in{
+            width:100%;
+            height:auto;
+        }
+        .client-in ul{
+            padding:0;
+            margin:0;
+        }
+        .client-in ul li{
+            list-style: none;
+            display: inline-block;
+            width:190px;
+            height:140px;
+            position:relative;
+            overflow:hidden;
+            cursor:pointer;
+            margin:10px;
+            box-shadow:0px 0px 0px -7px rgb(51, 51, 51);
+        }
+        .client-in ul li img{
+            width:100%;
+            height:100%;
+        }
+        .client-in ul li img:nth-child(1){
+            transform:translateY(0);
+            transition: .5s;
+        }
+        .client-in ul li img:nth-child(2){
+            transform:translateY(0);
+            transition: .5s;
+        }
+        /* Hover */
+        .client-in ul li:hover img:nth-child(1){
+            transform:translateY(-100%);
+            transition: .5s;
+        }
+        .client-in ul li:hover img:nth-child(2){
+            transform:translateY(-100%);
+            transition: .5s;
+        }
+        /* End - Hover */
+    </style>
+</head>
+<body>
+    <div class="client-wrap">
+        <h1>Our Partners</h1>
+        <hr>
+        <div class="client-in">
+            <ul>
+                <li>
+                    <img src="./images/ACWICT_1.jpg" alt="">
+                    <img src="./images/ACWICT.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./images/usiu_1.png" alt="">
+                    <img src="./images/usiu.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
