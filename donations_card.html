@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <title>Donations Card || A.Wanjau Developer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Muli:300,700&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Muli', sans-serif;
+	background-color: #FFF5F3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 80vh;
+	margin: 0;
+}
+
+.box {
+	background-color: #fff;
+  	box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+	border-radius: 20px;
+	padding: 40px 60px;
+	position: relative;
+}
+
+.box::before {
+	background-color: #FF3D44;
+	border-radius: 30px;
+	content: '';
+	opacity: 0.9;
+	position: absolute;
+	bottom: -30px;
+	right: -30px;
+	height: 220px;
+	width: 220px;
+	z-index: -1;
+}
+
+.box img {
+	display: block;
+	margin-top: -60px;
+	margin-bottom: 10px;
+	width: 50px;
+}
+
+.box h2 {
+	margin: 0;
+}
+
+.box p {
+	line-height: 24px;
+}
+
+.btn {
+	border-radius: 5px;
+  	box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+	color: #fff;
+	display: inline-block;
+	padding: 10px 15px;
+	text-decoration: none;
+    align-items:center;
+    justify-content:center;
+}
+
+.btn.mchanga {
+	background-color: #499649;
+	margin-right: 10px;
+}
+
+.btn.patreon {
+	background-color: rgb(232, 91, 70);
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://image.flaticon.com/icons/svg/138/138292.svg" alt="coins" />
+        <h2>Donate</h2>
+        <p>Support Kids With Solutions Foundation. <br/>Donate below.</p>
+        <a href="https://paypal.me/florinpop17" target="_blank" class="btn mchanga"><i class="fab fa-paypal"></i>M-Changa</a>
+    </div>
+</body>
+</html>
