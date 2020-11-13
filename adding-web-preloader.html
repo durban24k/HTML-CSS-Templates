@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to Add CSS Preloader into Webapage</title>
+    <style>
+        .wrapper{
+            font-family: poppins;
+            padding: 50px;
+        }
+        .wrapper img {
+            width: 100%;
+        }
+        .wrapper p{
+            margin-bottom: 16px;
+        }
+        .page-loader{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: #262626;
+        }
+        .load-spinner{
+            position: relative;
+            width: 60px;
+            height: 60px;
+            transform: translateY(-50%);
+            border: 10px solid #fff;
+            border-radius: 50%;
+            margin: 50vh auto 0;                        
+        }
+        .load-spinner:after{
+            position: absolute;
+            content: '';
+            width: 60px;
+            height: 60px;
+            border: 10px solid #fa0461;
+            border-radius: 50%;
+            top: -10px;
+            left: -10px;            
+            border-top: 10px solid transparent;
+            transform: rotate(45deg);
+            animation: animate 1s ease-in-out infinite;
+        }
+        @keyframes animate{
+            from{
+                transform: rotate(45deg);
+            }
+            to{
+                transform: rotate(450deg);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+  
+  <div class="page-loader">
+       <div class="load-spinner"></div>
+   </div>    
+   
+   <center>
+       <div class="wrapper">
+       <img src="https://i.postimg.cc/cJbKD2fX/1.jpg" alt="">
+        <h2>This is Header Text</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quas quia deleniti, repudiandae perspiciatis sit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente tempora maxime id praesentium quos! Libero rem aperiam dolore aut laboriosam quae itaque optio dicta architecto vero? Magni perferendis laudantium error quas, quis incidunt dolore sequi inventore reprehenderit obcaecati eius neque modi culpa earum odit, quibusdam a harum explicabo eum, deserunt?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta atque saepe maxime, doloremque soluta tempora tempore explicabo nesciunt praesentium deserunt ipsa dolores iure cumque veritatis!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita eum facere quo natus quisquam repellendus sed eaque quibusdam ullam molestias suscipit, quas, dicta ab! Est pariatur excepturi cum consequuntur, neque.</p>
+    </div>
+   </center>
+   
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(window).on('load', function(){
+           $('.page-loader').fadeOut(3000); 
+        });
+    </script>
+</body>
+</html>

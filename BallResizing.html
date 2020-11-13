@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>BALL RESIZING</title>
+        <style>
+            .circle{
+                width:200px;
+                height:200px;
+                border-radius:100px;
+                background-color:#EEF529;
+                position:absolute;
+                top:0;
+                left:0;
+            }
+            @-webkit-keyframes fadeInOut{
+                from{opacity:1;}
+                to{opacity:0;}
+            }
+            @keyframes fadeInOut{
+                from{opacity:1;}
+                to{opacity:0;}
+            }
+            @-webkit-keyframes shrinkGrow{
+                from{ width:200px; height:200px;}
+                to{ width:100px; height:100px;}
+            }
+            @keyframes shrinkGrow{
+                from{ width:200px; height:200px;}
+                to{ width:100px; height:100px;}
+            }
+            @-webkit-keyframes move{
+                0%{left:0px; top:0px;}
+                25%{left:300px; top:0px;}
+                50%{left:300px; top:300px;}
+                75%{left:0px; top:300px;}
+                100%{left:0px; top:0px;}
+            }
+            @keyframes move{
+                0%{left:0px; top:0px;}
+                25%{left:300px; top:0px;}
+                50%{left:300px; top:300px;}
+                75%{left:0px; top:300px;}
+                100%{left:0px; top:0px;}
+            }
+            @-webkit-keyframes change{
+                0%{background-color:#EEF529;}
+                16.67%{background-color:#CC5E00;}
+                33.33%{background-color:#B40808;}
+                50%{background-color:#8312C9;}
+                66.67%{background-color:#1E3CBA;}
+                83.33%{background-color:#EEF529;}
+            }
+            @keyframes change{
+                0%{background-color:#EEF529;}
+                16.67%{background-color:#CC5E00;}
+                33.33%{background-color:#B40808;}
+                50%{background-color:#8312C9;}
+                66.67%{background-color:#1E3CBA;}
+                83.33%{background-color:#EEF529;}
+            }
+            .circle{
+                -webkit-animation:move 2s infinite, shrinkGrow 1s linear infinite alternate, change 6s 2s linear infinite;
+                animation:move 2s infinite, shrinkGrow 1s linear infinite alternate, change 6s 2s linear infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="circle"></div>
+    </body>
+</html>

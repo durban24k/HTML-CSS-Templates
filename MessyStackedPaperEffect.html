@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Messy Stacked Paper Effect</title>
+        <style>
+            .paper{
+                background:#FFFFFF;
+                padding:30px;
+                position:relative;
+            }
+            .paper, .paper::before, .paper::after{
+                box-shadow:1px 1px 1px rgba(0,0,0,0.25);
+                border: 1px solid #BBB;
+            }
+            .paper::before, .paper::after{
+                content:"";
+                position:absolute;
+                height:95%;
+                width:99%;
+                background-color:#EEE;
+            }
+            .paper::before{
+                right:5px;
+                top:0;
+                transform:rotate(-1deg);
+                z-index:-2;
+            }
+            .paper::after{
+                top:5px;
+                right:-5px;
+                transform:rotate(1deg);
+                z-index:-2;
+            }
+            body{
+                background:#333;
+                padding:3em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="paper">
+            Messy Stacked Paper Effect.
+        </div>
+    </body>
+</html>

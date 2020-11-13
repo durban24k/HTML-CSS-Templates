@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=width-device, initial-scale=1.0">
+        <meta http-equip="X-UA-Compatible" content="ie-edge">
+        <title>TEMPLATE::HOVER EFFECT</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+            }
+            html{
+                font-family:'Poppins', sans-serif;
+                font-size:10px;
+            }
+            header{
+                background-color:#050505;
+            }
+            .container{
+                width:100%;
+                max-width:98rem;
+                margin:0 auto;
+            }
+            nav{
+                width:100%;
+                height:7rem;
+                display:flex;
+                align-items:center;
+                justify-content:space-between;
+            }
+            .nav-list{
+                display:flex;
+                list-style:none;
+                position:relative;
+            }
+            .nav-item{
+                padding:1rem 0;
+                min-width:10rem;
+                text-align:center;
+            }
+            .nav-link{
+                font-size:1.4rem;
+                text-transform:uppercase;
+                text-decoration:none;
+                color:#FFF;
+            }
+            .active{
+                height:2px;
+                width:10rem;
+                background-color:#FFF;
+                position:absolute;
+                bottom:-1rem;
+                transition:transform .6s;
+            }
+
+            .nav-item:nth-child(1):hover ~ .active{
+                transform:translateX(0);
+            }
+            .nav-item:nth-child(2):hover ~ .active{
+                transform:translateX(10rem);
+            }
+            .nav-item:nth-child(3):hover ~ .active{
+                transform:translateX(20rem);
+            }
+            .nav-item:nth-child(4):hover ~ .active{
+                transform:translateX(30rem);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav>
+                    <a href="navigationhovereffect.html" class="nav-link">LOGO</a>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                        <div class="active"></div>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </body>
+</html>

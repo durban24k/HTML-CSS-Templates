@@ -1,124 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Box Model Using CSS Flex</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-        *{
-            margin:0;
-            padding:0;
-            font-family:'Poppins',sans-serif;
-        }
-        body{
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            background:#16384c;
-        }
-        .directors{
-            position:relative;
-            width:1100px;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            flex-wrap:wrap;
-            padding:30px;
-        }
-        .directors .card{
-            position:relative;
-            max-width:300px;
-            height:215px;
-            background:#fff;
-            margin:30px 10px;
-            padding:20px 15px;
-            display:flex;
-            flex-direction:column;
-            box-shadow:0 5px 20px rgba(0,0,0,0.5);
-            transition:0.3s ease-in-out;
-        }
-        .directors .card:hover{
-            height:480px;
-        }
-        .directors .card .imgBx{
-            position:relative;
-            width:260px;
-            height:260px;
-            top:-60px;
-            left:20px;
-            z-index:1;
-            box-shadow:0 5px 20px rgba(0,0,0,0.2);
-        }
-        .directors .card .imgBx img{
-            max-width:100%;
-            border-radius:4px;
-        }
-        .directors .card .content{
-            position:relative;
-            margin-top:-140px;
-            padding:10px 15px;
-            text-align:center;
-            color:#111;
-            visibility:hidden;
-            opacity:0;
-            transition:0.3s ease-in-out;
-        }
-        .directors .card:hover .content{
-            visibility: visible;
-            opacity:1;
-            margin-top:-40px;
-            transition-delay:0.3s;
-        }
-    </style>
-</head>
-<body>
-    <div class="directors">
-        <div class="card">
-            <div class="imgBx">
-                <img src="./images/img1.jpg" alt="">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>CSS Card Hover Effect</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+                outline:none;
+                font-family:"poppins",sans-serif;
+            }
+            body{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                min-height:100vh;
+                background:#00d0ff;
+            }
+            .container{
+                width:1100px;
+                display:grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+                grid-gap:15px;
+                margin:0 auto;
+            }
+            .container .card{
+                position:relative;
+                width:300px;
+                height:400px;
+                margin:0 auto;
+                background: #fff;
+                transition: 0.5s;
+                align-items:center;
+                justify-content:center;
+            }
+            .container .card:hover{
+                box-shadow:0 30px 50px rgba(0,0,0,0.2);
+            }
+            .container .card .face{
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            .container .card .face.face1{
+                box-sizing:border-box;
+                padding:20px;
+                text-align:center;
+                background:#fff;
+                color:#013d4a;
+            }
+            .container .card .face.face1 h2{
+                margin-top:70px;
+            }
+            .container .card .face.face1 a{
+                display:inline-block;
+                padding:5px 10px;
+                margin-top:20px;
+                text-decoration:none;
+                color:#013d4a;
+                border:2px solid #013d4a;
+            }
+            .container .card .face.face1 a:hover{
+                color:#fff;
+                background:#013d4a;
+            }
+            .container .card .face.face2{
+                background:#013d4a;
+                transition:0.5s;
+            }
+            .container .card:hover .face.face2{
+                height:80px;
+                width:80px;
+                border-radius:50%;
+                top:40px;
+                left:50%;
+                transform:translateX(-50%);
+                background:transparent;
+                border:2px solid #013d4a;
+            }
+            .container .card .face.face2 h2{
+                margin:0;
+                padding:0;
+                font-size:10em;
+                color:#fff;
+                transition:0.5s
+            }
+            .container .card:hover .face.face2 h2{
+                color: #013d4a;
+                font-size:2em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class=" face face1">
+                    <div class="content">
+                        <h2>Service One</h2>
+                        <p>Lorem ipsum dolor sit amet, consecteteur adipisicing elit, sed do eiusmod tempr incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>01</h2>
+                </div>
             </div>
-            <div class="content">
-                <h2>Card One</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum vel aspernatur, corporis repudiandae, voluptas id velit libero dolor necessitatibus sapiente maiores, consequatur laboriosam at? Eum error magni iure blanditiis voluptas!</p>
+            <div class="card">
+                <div class=" face face1">
+                    <div class="content">
+                        <h2>Service Two</h2>
+                        <p>Lorem ipsum dolor sit amet, consecteteur adipisicing elit, sed do eiusmod tempr incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>02</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class=" face face1">
+                    <div class="content">
+                        <h2>Service Three</h2>
+                        <p>Lorem ipsum dolor sit amet, consecteteur adipisicing elit, sed do eiusmod tempr incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>03</h2>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="imgBx">
-                <img src="./images/img1.jpg" alt="">
-            </div>
-            <div class="content">
-                <h2>Card Two</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum vel aspernatur, corporis repudiandae, voluptas id velit libero dolor necessitatibus sapiente maiores, consequatur laboriosam at? Eum error magni iure blanditiis voluptas!</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="imgBx">
-                <img src="./images/img1.jpg" alt="">
-            </div>
-            <div class="content">
-                <h2>Card Three</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum vel aspernatur, corporis repudiandae, voluptas id velit libero dolor necessitatibus sapiente maiores, consequatur laboriosam at? Eum error magni iure blanditiis voluptas!</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="imgBx">
-                <img src="./images/img1.jpg" alt="">
-            </div>
-            <div class="content">
-                <h2>Card Four</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum vel aspernatur, corporis repudiandae, voluptas id velit libero dolor necessitatibus sapiente maiores, consequatur laboriosam at? Eum error magni iure blanditiis voluptas!</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="imgBx">
-                <img src="./images/img1.jpg" alt="">
-            </div>
-            <div class="content">
-                <h2>Card Five</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum vel aspernatur, corporis repudiandae, voluptas id velit libero dolor necessitatibus sapiente maiores, consequatur laboriosam at? Eum error magni iure blanditiis voluptas!</p>
-            </div>
-        </div>
-    </div>
-</body>
+    </body>
 </html>

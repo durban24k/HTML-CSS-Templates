@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>SPINNING LOADER</title>
+        <style>
+            .loader{
+                display:block;
+                width:40px;
+                height:40px;
+                border:10px solid #CCCCFF;
+                border-radius:50%;
+                border-top: 10px solid #AAAAFF;
+                animation:spin;
+                animation-iteration-count:infinite;
+                animation-duration:1s;
+                animation-timing-function:linear;
+            }
+            @keyframes spin{
+                from{
+                    transform:rotateZ(0deg);
+                }
+                to{
+                    transform:rotateZ(359deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loader"></div>
+    </body>
+</html>

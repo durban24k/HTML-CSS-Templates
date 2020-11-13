@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Star Wars</title>
+        <style>
+            /*body{
+                width:100%;
+                height:100%;
+                background:#000000;
+                overflow:hidden;
+                background-image:url("https://wallpaperfm.com/img/original/6/5/d/16852.jpg");
+                background-size:cover;
+                background-repeat:no-repeat;
+            }*/
+            .fade{
+                position:relative;
+                width:100%;
+                min-height:60vh;
+                top:-25px;
+                background-image:linear-gradient(0deg, transparent, black,75%);
+                z-index:1;
+            }
+            .star-wars{
+                display:flex;
+                justify-content:center;
+                position:relative;
+                height:800px;
+                color:#FEDA4A;
+                font-family:'Pathway Gothic One',sans-serif;
+                font-size:500%;
+                font-weight:600;
+                letter-spacing:6px;
+                line-height:150%;
+                perspective:400px;
+                text-align:center;
+            }
+            .crawl{
+                position:relative;
+                top:99999px;
+                transform-origin:50% 100%;
+                animation:crawl 60s linear infinite;
+            }
+            .crawl > title{
+                font-size:90%;
+                text-align:center;
+            }
+            .crawl > .title h1{
+                margin:0 0 100px;
+                text-transform:uppercase;
+            }
+            @keyframes crawl{
+                0%{
+                    top:-100px;
+                    transform: rotateX(20deg) translateZ(0);
+                }
+                100%{
+                    top:-6000px;
+                    transform:rotateX(25deg) translateZ(-2500px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="fade"></div>
+        <section class="star-wars">
+            <div class="crawl">
+                <div class="title">
+                    <p>Episode III</p>
+                    <h1>THE REVENGE OF THE SITH</h1>
+                </div>
+                <p>War! The Republic is crumbling under attacks by the ruthless Sith Lord, Count Danish. There are heroes on both sides. Evil is everywhere.</p>
+                <p>In a stunning move, the fiendish droid leader, General Kimo, has swept into the Republic capital and kidnapped Chancellor Martin, leader of the Galactic Senate.</p>
+                <p>As the Separatists Droid army attempts to flee the besieged capital with their valuable hostage, two Developer Jedi's lead a desperate mission to rescue the captive Chancellor.  .  .  .</p>
+            </div>
+        </section>
+    </body>
+</html>

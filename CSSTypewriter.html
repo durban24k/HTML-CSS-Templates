@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Typewriter</title>
+        <style>
+            /*GLOBAL STYLES*/
+            body{
+                background:#FFB3DA;
+                padding-top:5em;
+                display:flex;
+                justify-content:center;
+            }
+            /*DEMO-SPECIFIC STYLES*/
+            .typewriter h1{
+                color:#FFFFFF;
+                font-family: monospace;
+                overflow:hidden;
+                border-right: .15em solid #99FFDD;
+                white-space: nowrap;
+                margin:0 auto;
+                letter-spacing: .15em;
+                animation:
+                    typing 3.5s steps(30, end),
+                    blink-caret .5s step-end infinite;
+            }
+            /*THE TYPING EFFECT*/
+            @keyframes typing{
+                from {width:0}
+                to {width:100%}
+            }
+            /*THE TYPEWRITER CURSOR EFFECT*/
+            @keyframes blink-caret{
+                from, to {border-color: transparent}
+                50% {border-color: #99FFDD}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="typewriter">
+            <h1>Happy Monday My Friends!!!</h1>
+        </div>
+    </body>
+</html>
