@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R_WQMS || Dashboard</title>
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+	<script src="./js/index.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--wrapper start-->
+		<div class="wrapper">
+			<!--header menu start-->
+			<div class="header">
+				<div class="header-menu">
+					<div class="title"><span>AFIA</span></div>
+					<div class="sidebar-btn">
+						<i class="fas fa-bars"></i>
+					</div>
+					<ul>
+						<li><a href="#"><i class="fas fa-bell"></i></a></li>
+						<li><a href="#"><i class="fas fa-power-off"></i></a></li>
+					</ul>
+				</div>
+			</div>
+            <!--header menu end-->
+            <!--mobile navigation bar start-->
+            <div class="mobile-nav">
+                <div class="nav-bar">
+                    <img src="./images/profile.jpeg" class="mobile-profile-image" alt="">
+                    <i class="fas fa-bars nav-btn"></i>
+                </div>
+                <div class="mobile-nav-items">
+                    <a href="#" id="dash-mob-link"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+                    <a href="#" id="station-mob-link"><i class="fas fa-map-pin"></i><span>Stations</span></a>
+				<a href="#" id="sensors-mob-link"><i class="fas fa-satellite-dish"></i><span>Sensors</span></a>
+                    <a href="#" id="settings-mob-link"><i class="fas fa-cogs"></i><span>Settings</span></a>
+                    <a href="#" id="about-mob-link"><i class="fas fa-info-circle"></i><span>About</span></a>
+                </div>
+            </div>
+            <!--mobile navigation bar end-->
+			<!--sidebar start-->
+			<div class="sidebar">
+				<div class="sidebar-menu">
+					<center class="profile">
+						<img src="./images/profile.jpeg" alt="">
+						<p>Alfred</p>
+					</center>
+					<li class="item" id="main-home">
+						<a href="#dashboard" class="menu-btn">
+							<i class="fas fa-desktop"></i><span>Dashboard</span>
+						</a>
+					</li>
+					<li class="item" id="stations">
+						<a href="#stations" class="menu-btn allstations">
+							<i class="fas fa-map-pin"></i><span>Stations</span>
+						</a>
+					</li>
+					<li class="item" id="sensors">
+						<a href="#sensors" class="menu-btn">
+							<i class="fas fa-satellite-dish"></i><span>Sensors</span>
+						</a>
+					</li>
+					<li class="item" id="settings">
+						<a href="#settings" class="menu-btn">
+							<i class="fas fa-cog"></i><span>Settings</i></span>
+						</a>
+					</li>
+					<li class="item" id="about">
+						<a href="#" class="menu-btn">
+							<i class="fas fa-info-circle"></i><span>About</span>
+						</a>
+					</li>
+				</div>
+			</div>
+			<!--sidebar end-->
+			<!--main container start-->
+			<div class="main-container">
+				
+			</div>
+			<!--main container end-->
+		</div>
+     <!--wrapper end-->
+        
+    <script type="text/javascript">
+		$(document).ready(function(){
+			$(".nav-btn").click(function(){
+				$(".mobile-nav-items").toggleClass("active");
+			});
+
+			$(".sidebar-btn").click(function(){
+				$(".wrapper").toggleClass("collapse");
+			});
+			
+			// $("#main-home").click(function(){
+			// 	$(".dashboard").show();
+			// 	$(".stations").hide();
+			// 	$(".sensors").hide();
+			// });
+			// $("#stations").click(function(){
+			// 	$(".stations").show();
+			// 	$(".dashboard").hide();
+			// 	$(".sensors").hide();
+			// });
+			// $("#sensors").click(function(){
+			// 	$(".stations").hide();
+			// 	$(".dashboard").hide();
+			// 	$(".sensors").show();
+			// });
+		});
+
+	</script>
+</body>
+</html>
