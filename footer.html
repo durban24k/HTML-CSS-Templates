@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Responsive Footer:: CSS GRID </title>
+     <script src="https://kit.fontawesome.com/6a7a6739bf.js" crossorigin="anonymous"></script>
+     <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+          *{
+               font-family:'Poppins',sans-serif;
+               margin:0;
+               padding:0;
+               box-sizing:border-box;
+          }
+          body{
+               display:grid;
+               justify-content:end;
+               align-content:end;
+               min-height:100vh;
+          }
+          footer{
+               position:relative;
+               width:100%;
+               height:auto;
+               padding:50px 100px;
+               background:#026e7c;
+          }
+          footer .container{
+               width:100%;
+               display:grid;
+               grid-template-columns: 1.8fr 1fr 1fr 1fr;
+               grid-gap:20px;
+          }
+          footer .container .sec h2{
+               position:relative;
+               color:#ffffff;
+               font-weight:500;
+               margin-bottom:15px;
+          }
+          footer .container .sec h2::before{
+               content:'';
+               position:absolute;
+               bottom:-5px;
+               left:0;
+               width:50px;
+               height:2px;
+               background:#ffffff;
+          }
+          footer .container .sec p{
+               color:#ffffff;
+          }
+          .sci{
+               margin-top:20px;
+               display:grid;
+               grid-template-columns: repeat(4,50px);
+               grid-gap:10px;
+          }
+          .sci li{
+               list-style:none;
+          }
+          .sci li a{
+               display:inline-block;
+               width:48px;
+               height:48px;
+               background:#037e8f;
+               display:grid;
+               align-content:center;
+               justify-content:center;
+               text-decoration:none;
+               border-radius:4px;
+          }
+          .sci li a:hover{
+               background:#0494a7;
+          }
+          .sci li a i{
+               color:#ffffff;
+               font-size:20px;
+          }
+          .quicklinks{
+               position:relative;
+          }
+          .quicklinks li{
+               list-style:none;
+          }
+          .quicklinks li a{
+               color:#f7f7f7;
+               text-decoration:none;
+               margin-bottom:10px;
+               display:inline-block;
+          }
+          .quicklinks li a:hover{
+               color:#ffeb3b;
+          }
+          .info{
+               position:relative;
+          }
+          .info li{
+               display:grid;
+               grid-template-columns:30px 1fr;
+               margin-bottom: 16px;
+          }
+          .info li span:nth-child(1){
+               color:#ffffff;
+               font-size:20px;
+          }
+          .info li span{
+               color:#ffffff;
+          }
+          .info a{
+               color:#f7f7f7;
+               text-decoration:none;
+          }
+          .info a:hover{
+               color:#ffeb3b;
+          }
+          .copyrightText{
+               width:100%;
+               background:#025763;
+               padding:10px 100px;
+               text-align:center;
+               color:#ffffff;
+          }
+          /* Responsiveness of the footer */
+          @media (max-width:991px){
+               footer{
+                    padding:40px;
+               }
+               footer .container{
+                    grid-template-columns:repeat(2,1fr);
+                    grid-gap:20px;
+               }
+               .copyrightText{
+                    padding:10px 50px;
+               }
+          }
+          @media (max-width:768px){
+               footer .container{
+                    grid-template-columns:repeat(1,1fr);
+                    grid-gap:20px;
+               }
+               .copyrightText{
+                    padding:10px 50px;
+               }
+          }
+     </style>
+</head>
+<body>
+     <footer>
+          <div class="container">
+               <div class="sec aboutus">
+                    <h2>About Us</h2>
+                    <p>
+                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                         Tenetur aliquam magni repudiandae impedit fuga rem obcaecati, 
+                         doloribus itaque optio, vel eaque delectus est facilis provident 
+                         laudantium quis eos.
+                    </p>
+                    <ul class="sci">
+                         <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                         <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+               </div>
+               <div class="sec quicklinks">
+                    <h2>Quick Links</h2>
+                    <ul>
+                         <li><a href="#">About Us</a></li>
+                         <li><a href="#">FAQ</a></li>
+                         <li><a href="#">Privacy Policy</a></li>
+                         <li><a href="#">Help</a></li>
+                         <li><a href="#">Terms and Conditions</a></li>
+                         <li><a href="#">Contact</a></li>
+                    </ul>
+               </div>
+               <div class="sec quicklinks">
+                    <h2>Shop</h2>
+                    <ul>
+                         <li><a href="#">Men</a></li>
+                         <li><a href="#">Women</a></li>
+                         <li><a href="#">Children</a></li>
+                         <li><a href="#">Shoes</a></li>
+                         <li><a href="#">Watch</a></li>
+                    </ul>
+               </div>
+               <div class="sec contact">
+                    <h2>Contact Us</h2>
+                    <ul class="info">
+                         <li>
+                              <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                              <span>#15 Mwathithi Street<br>
+                              USIU, Nairobi 00100,<br> Kenya</span>
+                         </li>
+                         <li>
+                              <span><i class="fas fa-phone-alt"></i></span>
+                              <p><a href="tel:+254720000000">+254 720 000000</a><br>
+                              <a href="tel:+254721000000">+254 721 000000</a></p>
+                         </li>
+                         <li>
+                              <span><i class="fas fa-envelope"></i></span>
+                              <p><a href="mailto:durban24k@mail.com">durban24k@mail.com</a></p>
+                         </li>
+                    </ul>
+               </div>
+          </div>
+     </footer>
+     <div class="copyrightText">
+          <p>Copyright &copy; 2021 Durban24k. All Rights Reserved.</p>
+     </div>
+</body>
+</html>
