@@ -27,19 +27,19 @@
                padding:50px 100px;
                background:#026e7c;
           }
-          footer .container{
+          footer .footer-container{
                width:100%;
                display:grid;
                grid-template-columns: 1.8fr 1fr 1fr 1fr;
                grid-gap:20px;
           }
-          footer .container .sec h2{
+          footer .footer-container .sec h2{
                position:relative;
                color:#ffffff;
                font-weight:500;
                margin-bottom:15px;
           }
-          footer .container .sec h2::before{
+          footer .footer-container .sec h2::before{
                content:'';
                position:absolute;
                bottom:-5px;
@@ -48,7 +48,7 @@
                height:2px;
                background:#ffffff;
           }
-          footer .container .sec p{
+          footer .footer-container .sec p{
                color:#ffffff;
           }
           .sci{
@@ -93,26 +93,26 @@
           .quicklinks li a:hover{
                color:#ffeb3b;
           }
-          .info{
+          .footer-info{
                position:relative;
           }
-          .info li{
+          .footer-info li{
                display:grid;
                grid-template-columns:30px 1fr;
                margin-bottom: 16px;
           }
-          .info li span:nth-child(1){
+          .footer-info li span:nth-child(1){
                color:#ffffff;
                font-size:20px;
           }
-          .info li span{
+          .footer-info li span{
                color:#ffffff;
           }
-          .info a{
+          .footer-info a{
                color:#f7f7f7;
                text-decoration:none;
           }
-          .info a:hover{
+          .footer-info a:hover{
                color:#ffeb3b;
           }
           .copyrightText{
@@ -127,7 +127,7 @@
                footer{
                     padding:40px;
                }
-               footer .container{
+               footer .footer-container{
                     grid-template-columns:repeat(2,1fr);
                     grid-gap:20px;
                }
@@ -136,7 +136,7 @@
                }
           }
           @media (max-width:768px){
-               footer .container{
+               footer .footer-container{
                     grid-template-columns:repeat(1,1fr);
                     grid-gap:20px;
                }
@@ -148,7 +148,7 @@
 </head>
 <body>
      <footer>
-          <div class="container">
+          <div class="footer-container">
                <div class="sec aboutus">
                     <h2>About Us</h2>
                     <p>
@@ -187,7 +187,7 @@
                </div>
                <div class="sec contact">
                     <h2>Contact Us</h2>
-                    <ul class="info">
+                    <ul class="footer-info">
                          <li>
                               <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
                               <span>#15 Mwathithi Street<br>

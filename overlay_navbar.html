@@ -25,10 +25,10 @@
                clip-path: circle(25px at calc(100% - 45px) 45px);
                transition: all 0.3s ease-in-out;
           }
-          #active:checked ~ .navbar-overlay{
+          #nav-active:checked ~ .navbar-overlay{
                clip-path: circle(75%);
           }
-          .menu-btn{
+          .navbar-btn{
                position: absolute;
                z-index: 2;
                right: 20px;
@@ -46,11 +46,11 @@
                /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
                transition: all 0.3s ease-in-out;
           }
-          #active:checked ~ .menu-btn{
+          #nav-active:checked ~ .navbar-btn{
                background: #fff;
                color: #4158d0;
           }
-          #active:checked ~ .menu-btn i:before{
+          #nav-active:checked ~ .navbar-btn i:before{
                content: "\f00d";
           }
           .navbar-overlay ul{
@@ -96,7 +96,7 @@
           input[type="checkbox"]{
                display: none;
           }
-          .content{
+          .hero{
                position: absolute;
                top: 50%;
                left: 50%;
@@ -106,19 +106,19 @@
                width: 100%;
                color: #202020;
           }
-          .content .title{
+          .hero .title{
                font-size: 40px;
                font-weight: 700;
           }
-          .content p{
+          .hero p{
                font-size: 35px;
                font-weight: 600;
           }
       </style>
    </head>
    <body>
-      <input type="checkbox" id="active">
-      <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="nav-active">
+      <label for="nav-active" class="navbar-btn"><i class="fas fa-bars"></i></label>
       <div class="navbar-overlay">
          <ul>
             <li><a href="#">Home</a></li>
@@ -128,7 +128,7 @@
             <li><a href="#">Feedback</a></li>
          </ul>
       </div>
-      <div class="content">
+      <div class="hero">
          <div class="title">
             Fullscreen Overlay Navigation Bar
          </div>
