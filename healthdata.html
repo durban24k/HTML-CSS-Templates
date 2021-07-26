@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>New Patient</title>
+     <style>
+          *{
+               margin:0;
+               padding:0;
+               box-sizing:border-box;
+               font-family: 'Source Sans Pro', sans-serif;
+          }
+          body{
+               background-color: rgb(236,32,39);
+               height:100vh;
+               width:100%;
+               display:flex;
+               align-items:center;
+               justify-content: center;
+          }
+          a{
+               text-decoration: none;
+          }
+          .quote_wrapper{
+               max-width: 700px;
+               width: 100%;
+               background: #fff;
+               margin: 20px auto;
+               box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+               padding: 30px;
+          }
+          
+          .quote_wrapper .title{
+               font-size: 24px;
+               font-weight: 700;
+               margin-bottom: 25px;
+               color:rgb(236,32,39);
+               text-transform: uppercase;
+               text-align: center;
+          }
+          
+          .quote_wrapper .form{
+               width: 100%;
+          }
+          
+          .quote_wrapper .form .inputfield{
+               margin-bottom: 15px;
+               display: flex;
+               align-items: center;
+          }
+          
+          .quote_wrapper .form .inputfield label{
+               width: 200px;
+               color: #757575;
+               margin-right: 10px;
+               font-size: 14px;
+          }
+          
+          .quote_wrapper .form .inputfield .input,
+          .quote_wrapper .form .inputfield .textarea{
+               width: 100%;
+               outline: none;
+               border: 1px solid #d5dbd9;
+               font-size: 15px;
+               padding: 8px 10px;
+               border-radius: 3px;
+               transition: all 0.3s ease;
+          }
+          
+          .quote_wrapper .form .inputfield .textarea{
+               width: 100%;
+               height: 125px;
+               resize: none;
+          }
+          
+          .quote_wrapper .form .inputfield .custom_select{
+               position: relative;
+               width: 100%;
+               height: 37px;
+          }
+          
+          .quote_wrapper .form .inputfield .custom_select:before{
+               content: "";
+               position: absolute;
+               top: 12px;
+               right: 10px;
+               border: 8px solid;
+               border-color: #d5dbd9 transparent transparent transparent;
+               pointer-events: none;
+          }
+          
+          .quote_wrapper .form .inputfield .custom_select select{
+               -webkit-appearance: none;
+               -moz-appearance:   none;
+               appearance:        none;
+               outline: none;
+               width: 100%;
+               height: 100%;
+               border: 0px;
+               padding: 8px 10px;
+               font-size: 15px;
+               border: 1px solid #d5dbd9;
+               border-radius: 3px;
+          }
+          
+          
+          .quote_wrapper .form .inputfield .input:focus,
+          .quote_wrapper .form .inputfield .textarea:focus,
+          .quote_wrapper .form .inputfield .custom_select select:focus{
+               border: 1px solid rgb(236,32,39);
+          }
+          
+          .quote_wrapper .form .inputfield p{
+               font-size: 14px;
+               color: #757575;
+          }
+          .quote_wrapper .form .inputfield .check{
+               width: 15px;
+               height: 15px;
+               position: relative;
+               display: block;
+               cursor: pointer;
+          }
+          .quote_wrapper .form .inputfield .check input[type="checkbox"]{
+               position: absolute;
+               top: 0;
+               left: 0;
+               opacity: 0;
+          }
+          .quote_wrapper .form .inputfield .check .checkmark{
+               width: 15px;
+               height: 15px;
+               border: 1px solid rgb(236,32,39);
+               display: block;
+               position: relative;
+          }
+          .quote_wrapper .form .inputfield .check .checkmark:before{
+               content: "";
+               position: absolute;
+               top: 1px;
+               left: 2px;
+               width: 5px;
+               height: 2px;
+               border: 2px solid;
+               border-color: transparent transparent #fff #fff;
+               transform: rotate(-45deg);
+               display: none;
+          }
+          .quote_wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+               background: rgb(236,32,39);
+          }
+          
+          .quote_wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+               display: block;
+          }
+          
+          .quote_wrapper .form .inputfield .btn{
+               width: 100%;
+               padding: 8px 10px;
+               font-size: 15px; 
+               border: 0px;
+               background:  rgb(168, 23, 28);
+               color: #fff;
+               cursor: pointer;
+               border-radius: 3px;
+               outline: none;
+          }
+          
+          .quote_wrapper .form .inputfield .btn:hover{
+               background:rgb(236,32,39);
+          }
+          
+          .quote_wrapper .form .inputfield:last-child{
+               margin-bottom: 0;
+          }
+          
+          @media (max-width:420px) {
+               .quote_wrapper .form .inputfield{
+               flex-direction: column;
+               align-items: flex-start;
+               }
+               .quote_wrapper .form .inputfield label{
+               margin-bottom: 5px;
+               }
+               .quote_wrapper .form .inputfield.terms{
+               flex-direction: row;
+               }
+          }
+          
+          @media screen and (max-width:600px){
+               .about-section{
+                    padding: 0;
+               }
+               .inner-container{
+                    padding: 60px;
+               }
+          
+               #hero .hero h1{
+                    font-size:40px;
+               }
+               .cta {
+                         font-size: 20px;
+                         padding: 10px 30px;
+                    }
+               .wrapper .logo img{
+                    height:39px;
+                    width:200px;
+               }
+          }
+     </style>
+</head>
+<body>
+     <div class="quote_wrapper">
+          <div class="title">
+               Health Center
+          </div>
+          <form class="form" action="./email_sender/order_email_html.php" method="POST">
+               <h1 class="title" style="text-decoration:underline;">Patient Information</h1>
+               <div class="inputfield">
+                    <label>Full Name*</label>
+                    <input type="text" class="input" name="FullName" required>
+               </div> 
+               <div class="inputfield">
+                    <label>Patient No</label>
+                    <input type="text" class="input" name="Company">
+               </div>
+               <div class="inputfield">
+                    <label>Gender*</label>
+                    <input type="text" class="input" name="Email" required>
+               </div>
+               <div class="inputfield">
+                    <label>Huduma Number*</label>
+                    <input type="text" class="input" name="Phone" required>
+               </div>
+               
+               
+               <div class="inputfield">
+                    <label>Prescription*</label>
+                    <textarea class="textarea" name="AOB"></textarea>
+               </div> 
+               <div class="inputfield">
+                    <input type="submit" value="Submit Request" class="btn">
+               </div>
+          </form>
+     </div>
+</body>
+</html>
