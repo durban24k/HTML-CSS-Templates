@@ -12,7 +12,7 @@ body {
     font-size: 1rem;
     line-height: 1.65;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #bff6fa 50%, #e9dbef 50%);
+    background: linear-gradient(to right, rgb(253, 172, 172) 50%, #000000 50%);
     color: #fff;
 }
 
@@ -45,12 +45,20 @@ body {
     width: 70%;
 }
 
-.title {
+.title-cs {
     display: inline-block;
     font-size: 40px;
     position: relative;
     margin-bottom: 1rem;
-    color:rgb(8, 88, 163);
+    color:#DB4437;
+}
+
+.title {
+    display: inline-block;
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 1rem;
+    color:#8a0e03;
 }
 
 .title::after {
@@ -59,9 +67,10 @@ body {
     bottom: 0;
     left: 0;
     height: 3px;
-    background-color:rgb(8, 88, 163);;
+    background-color:#8a0e03;
     width: 140px;
 }
+
 
 .intro {
     font-size: 15px;
@@ -69,18 +78,18 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 1rem;
-    color:rgb(8, 88, 163);
+    color:#d42211;
     font-weight:bold;
 }
 
 .uc__description {
     margin-bottom: 2rem;
     line-height: 1.77;
-    color: rgb(8, 88, 163);
+    color: #d42211;
 }
 
 .uc__subscribe {
-    background-color: #65c8cf;
+    background-color: #d42211;
     padding: 1.5rem;
     width: 85%;
     border-radius: 3px;
@@ -118,7 +127,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #3a7495;
+    background-color: #640800;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -127,7 +136,7 @@ body {
 }
 
 .uc__form .submit:hover {
-    background-color: #8fc1c5;
+    background-color: #f36558;
 }
 
 @media screen and (max-width:780px){
